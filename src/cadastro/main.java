@@ -8,6 +8,9 @@ import java.time.format.DateTimeFormatter;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
+import java.util.Map;
+import java.util.HashMap;
+
 
 
 public class main {
@@ -63,11 +66,49 @@ public class main {
 	            	return funcionario;
 	            	
 	            }
-	     
-	            
 	        }
 	        
 	        return null;
+		
+	}
+	
+	public static void exibirGroupByFuncao(Map<String, List<Funcionario>> funcionarios) {
+		DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.getDefault());
+        symbols.setDecimalSeparator(',');
+        symbols.setGroupingSeparator('.');
+        DecimalFormat decimalFormat = new DecimalFormat("#,##0.00", symbols);
+		for (Map.Entry<String, List<Funcionario>> entry : funcionarios.entrySet()) {
+            String funcao = entry.getKey();
+            List<Funcionario> listaFuncionarios = entry.getValue();	
+
+            System.out.println("\nFunção: " + funcao);
+            for (Funcionario funcionario : listaFuncionarios) {
+                String dataFormatada = funcionario.getDataNascimento().format(dateFormatter);
+                String salarioFormatado = decimalFormat.format(funcionario.getSalario());
+
+                System.out.println("  Nome: " + funcionario.getNome());
+                System.out.println("  Data de Nascimento: " + dataFormatada);
+                System.out.println("  Salário: " + salarioFormatado);
+                System.out.println("  -----------------------------");
+            }
+        }
+	}
+	
+	public static void groupByFuncao(List<Funcionario> funcionarios) {
+		Map<String, List<Funcionario>> funcionariosPorFuncao = new HashMap<>();
+        for (Funcionario funcionario : funcionarios) {
+            String funcao = funcionario.getFuncao();
+            // Se a função ainda não existe no Map, cria uma nova lista
+       
+            if (!funcionariosPorFuncao.containsKey(funcao)) {
+                funcionariosPorFuncao.put(funcao, new ArrayList<>());
+            }
+            // Adiciona o funcionário à lista correspondente à sua função
+            funcionariosPorFuncao.get(funcao).add(funcionario);
+        }
+        
+        exibirGroupByFuncao(funcionariosPorFuncao);
 		
 	}
 	
@@ -99,9 +140,6 @@ public class main {
 		
 		// TODO Auto-generated method stub
 		 List<Funcionario> funcionarios = new ArrayList<>();
-		 
-		 
-		
 		 funcionarios.add(new Funcionario("Maria", LocalDate.of(2000, 10, 18), new BigDecimal("2509.44"),"Operador"));
 		 funcionarios.add(new Funcionario("João", LocalDate.of(1990, 05, 12), new BigDecimal("2284.38"),"Operador"));
 		 funcionarios.add(new Funcionario("Caio", LocalDate.of(1961, 05, 02), new BigDecimal("9836.14"),"Coordenador"));
@@ -114,8 +152,8 @@ public class main {
 		 funcionarios.add(new Funcionario("Helena", LocalDate.of(1996, 9, 02), new BigDecimal("2799.93"),"Gerente"));
 		 
 		 
-		 exibirDados(funcionarios);
-		 removerFuncionario(funcionarios, "joão");
+		// exibirDados(funcionarios);
+		// removerFuncionario(funcionarios, "joão");
 		 
 	/**
      * A função foi aprimorada para oferecer mais flexibilidade no aumento salarial.
@@ -133,7 +171,9 @@ public class main {
      * aumentarSalario(funcionarios, "0.10", "João");
      * */
 		
-		 aumentarSalario(funcionarios, "0.10", null);
+		// aumentarSalario(funcionarios, "0.10", null);
+		 
+		 groupByFuncao(funcionarios);
 		
 		 
 	}
