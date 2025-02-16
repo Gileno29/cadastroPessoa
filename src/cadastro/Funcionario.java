@@ -1,6 +1,8 @@
 package cadastro;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Iterator;
+import java.util.List;
 
 public class Funcionario extends Pessoa{
 	 private BigDecimal salario;
@@ -24,6 +26,7 @@ public class Funcionario extends Pessoa{
 	public void setFuncao(String funcao) {
 		this.funcao = funcao;
 	}
+	
 	
   @Override
     public String toString() {

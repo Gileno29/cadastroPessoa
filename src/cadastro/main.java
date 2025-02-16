@@ -2,13 +2,38 @@ package cadastro;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-public class main {
 
+
+public class main {
+	
+	
+	public static void removerFuncionario(List<Funcionario>funcionarios, String elemento ) {
+		 Iterator<Funcionario> iterator = funcionarios.iterator();
+	        while (iterator.hasNext()) {
+	            Funcionario funcionario = iterator.next();
+	            if (funcionario.getNome().toLowerCase().equals(elemento.toLowerCase())) {
+	                iterator.remove();
+	                System.out.println("\nFuncionário "+elemento+" removido com sucesso! \n");
+	                
+	                System.out.println("======================  Lista de funcionarios após remoção =========================");
+	                for(int i = 0; i<funcionarios.size(); i++) {
+	       			 
+	       			 System.out.println(funcionarios.get(i));
+	       		 }
+	                
+	            }
+	        }
+		
+	}
 	public static void main(String[] args) {
+		
 		// TODO Auto-generated method stub
 		 List<Funcionario> funcionarios = new ArrayList<>();
 		 
+		 
+		
 		 funcionarios.add(new Funcionario("Maria", LocalDate.of(2000, 10, 18), new BigDecimal("2509.44"),"Operador"));
 		 funcionarios.add(new Funcionario("João", LocalDate.of(1990, 05, 12), new BigDecimal("2284.38"),"Operador"));
 		 funcionarios.add(new Funcionario("Caio", LocalDate.of(1961, 05, 02), new BigDecimal("9836.14"),"Coordenador"));
@@ -25,13 +50,14 @@ public class main {
 		 for(int i = 0; i<funcionarios.size(); i++) {
 			 
 			 System.out.println(funcionarios.get(i));
-			 
-			 
 		 }
 		 
 		 System.out.println("======================  Lista de funcionarios =========================");
-		 
+		
+		 removerFuncionario(funcionarios, "joão");
+		
 		 
 	}
+	
 
 }
