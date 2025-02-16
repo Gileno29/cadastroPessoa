@@ -1,6 +1,6 @@
 ## Documentação do Projeto de Gerenciamento de Funcionários
 
-##### Este projeto é uma aplicação Java que gerencia uma lista de funcionários, permitindo a execução de diversas operações, como adicionar, remover, atualizar e consultar informações dos funcionários. Abaixo estão detalhadas as funcionalidades e como o código foi implementado.
+Este projeto é uma aplicação Java que gerencia uma lista de funcionários, permitindo a execução de diversas operações, como adicionar, remover, atualizar e consultar informações dos funcionários. Abaixo estão detalhadas as funcionalidades e como o código foi implementado.
 
 
 
