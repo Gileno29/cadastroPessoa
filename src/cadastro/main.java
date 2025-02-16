@@ -4,6 +4,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.time.format.DateTimeFormatter;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 
 
 public class main {
@@ -18,14 +22,78 @@ public class main {
 	                System.out.println("\nFuncionário "+elemento+" removido com sucesso! \n");
 	                
 	                System.out.println("======================  Lista de funcionarios após remoção =========================");
-	                for(int i = 0; i<funcionarios.size(); i++) {
-	       			 
-	       			 System.out.println(funcionarios.get(i));
-	       		 }
+	                exibirDados(funcionarios);
 	                
 	            }
 	        }
+	 
+	       
 		
+	}
+	
+	public static void exibirDados(List<Funcionario>funcionarios) {
+		// Formatador de data
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        // Formatador de números (ponto para milhar e vírgula para decimal)
+        DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.getDefault());
+        symbols.setDecimalSeparator(',');
+        symbols.setGroupingSeparator('.');
+        DecimalFormat decimalFormat = new DecimalFormat("#,##0.00", symbols);
+		
+		for (Funcionario funcionario : funcionarios) {
+            String dataFormatada = funcionario.getDataNascimento().format(dateFormatter);
+            String salarioFormatado = decimalFormat.format(funcionario.getSalario());
+
+            System.out.println("Nome: " + funcionario.getNome());
+            System.out.println("Data de Nascimento: " + dataFormatada);
+            System.out.println("Salário: " + salarioFormatado);
+            System.out.println("Função: " + funcionario.getFuncao());
+            System.out.println("-----------------------------");
+        }
+		
+		
+	}
+	
+	public static Funcionario getByName(List<Funcionario>funcionarios, String name ) {
+		 Iterator<Funcionario> iterator = funcionarios.iterator();
+	        while (iterator.hasNext()) {
+	            Funcionario funcionario = iterator.next();
+	            if (funcionario.getNome().toLowerCase().equals(name.toLowerCase())) {
+	            	return funcionario;
+	            	
+	            }
+	     
+	            
+	        }
+	        
+	        return null;
+		
+	}
+	
+	public static void aumentarSalario(List<Funcionario>funcionarios, String valor, String f) {
+		
+		if( f !=null){
+			
+			 Funcionario funcionario=getByName(funcionarios, f);
+			 BigDecimal salarioAtual = funcionario.getSalario();
+	         BigDecimal aumento = salarioAtual.multiply(new BigDecimal(valor));    // Calcula 10% de aumento
+	         BigDecimal novoSalario = salarioAtual.add(aumento);                   // Adiciona o aumento ao salário atual
+	         funcionario.setSalario(novoSalario);                                  // Atualiza o salário do funcionário
+			
+		}else {
+		
+		
+			for (Funcionario funcionario : funcionarios) {
+	            BigDecimal salarioAtual = funcionario.getSalario();
+	            BigDecimal aumento = salarioAtual.multiply(new BigDecimal(valor));     // Calcula 10% de aumento
+	            BigDecimal novoSalario = salarioAtual.add(aumento);                    // Adiciona o aumento ao salário atual
+	            funcionario.setSalario(novoSalario);                                   // Atualiza o salário do funcionário
+	        }
+		}
+		
+		System.out.println("======================  Lista de funcionarios após promoção =========================");
+		exibirDados(funcionarios);
 	}
 	public static void main(String[] args) {
 		
@@ -46,15 +114,26 @@ public class main {
 		 funcionarios.add(new Funcionario("Helena", LocalDate.of(1996, 9, 02), new BigDecimal("2799.93"),"Gerente"));
 		 
 		 
-		 System.out.println("======================  Lista de funcionarios =========================");
-		 for(int i = 0; i<funcionarios.size(); i++) {
-			 
-			 System.out.println(funcionarios.get(i));
-		 }
-		 
-		 System.out.println("======================  Lista de funcionarios =========================");
-		
+		 exibirDados(funcionarios);
 		 removerFuncionario(funcionarios, "joão");
+		 
+	/**
+     * A função foi aprimorada para oferecer mais flexibilidade no aumento salarial.
+     * Inicialmente, o requisito era aumentar o salário de todos os funcionários em 10%.
+     * Agora, se o último parâmetro for passado como `null`, todos os funcionários terão 
+     * seus salários aumentados pelo percentual especificado no segundo parâmetro.
+     * 
+     * Caso um nome específico seja informado, a função buscará esse funcionário na lista 
+     * e aplicará o aumento apenas a ele.
+     * 
+     * Assinatura do método:
+     * aumentarSalario(List<Funcionario> funcionarios, String valorAumento, String nomeFuncionarioOpcional)
+     * 
+     * Exemplo de chamada do método:
+     * aumentarSalario(funcionarios, "0.10", "João");
+     * */
+		
+		 aumentarSalario(funcionarios, "0.10", null);
 		
 		 
 	}
