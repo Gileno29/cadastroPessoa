@@ -21,23 +21,23 @@ Estende a classe Pessoa e adiciona os atributos:
 
 ## Operações Implementadas:
 
-Inserir funcionários: Adiciona funcionários à lista.
+- Inserir funcionários: Adiciona funcionários à lista.
 
-Remover funcionário: Remove um funcionário específico da lista (exemplo: "João").
+- Remover funcionário: Remove um funcionário específico da lista (exemplo: "João").
 
-Aumento de salário: Aplica um aumento de 10% no salário de todos os funcionários.
+- Aumento de salário: Aplica um aumento de 10% no salário de todos os funcionários.
 
-Agrupar por função: Agrupa os funcionários em um Map, onde a chave é a função e o valor é a lista de funcionários.
+- Agrupar por função: Agrupa os funcionários em um Map, onde a chave é a função e o valor é a lista de funcionários.
 
-Filtrar aniversariantes: Filtra e exibe os funcionários que fazem aniversário nos meses 10 (outubro) e 12 (dezembro).
+- Filtrar aniversariantes: Filtra e exibe os funcionários que fazem aniversário nos meses 10 (outubro) e 12 (dezembro).
 
-Exibe o funcionario mais de maior idade na lista.
+- Exibe o funcionario mais de maior idade na lista.
 
-Ordenar alfabeticamente: Ordena e exibe os funcionários em ordem alfabética pelo nome.
+- Ordenar alfabeticamente: Ordena e exibe os funcionários em ordem alfabética pelo nome.
 
-Total dos salários: Calcula e exibe a soma de todos os salários dos funcionários.
+- Total dos salários: Calcula e exibe a soma de todos os salários dos funcionários.
 
-Salários mínimos: Calcula e exibe quantos salários mínimos (R$ 1212,00) cada funcionário ganha.
+- Salários mínimos: Calcula e exibe quantos salários mínimos (R$ 1212,00) cada funcionário ganha.
 
 
 ### Detalhamento do código:
