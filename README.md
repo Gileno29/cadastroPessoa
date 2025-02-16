@@ -84,7 +84,7 @@ public static void removerFuncionario(List<Funcionario>funcionarios, String elem
 
 Aumento de Salário:
 
-Um aumento de 10% é aplicado ao salário de cada funcionário, ou caso seja passado um funcionario especifico na chamada da funcao é aplicado um aumento de 10% apenas naquele funcionario
+Um aumento de 10% é aplicado ao salário de cada funcionário, ou caso seja passado um funcionario especifico na chamada da fução é aplicado um aumento de 10% apenas naquele funcionario
 
 ```java
 public static void aumentarSalario(List<Funcionario>funcionarios, String valor, String f) {
