@@ -240,7 +240,7 @@ public class main {
 	}
 	public static void main(String[] args) {
 		
-		// TODO Auto-generated method stub
+		
 		 List<Funcionario> funcionarios = new ArrayList<>();
 		 funcionarios.add(new Funcionario("Maria", LocalDate.of(2000, 10, 18), new BigDecimal("2509.44"),"Operador"));
 		 funcionarios.add(new Funcionario("João", LocalDate.of(1990, 05, 12), new BigDecimal("2284.38"),"Operador"));
@@ -257,24 +257,23 @@ public class main {
 		 exibirDados(funcionarios);
 		 removerFuncionario(funcionarios, "joão");
 		 
-	/**
-     * A função foi aprimorada para oferecer mais flexibilidade no aumento salarial.
-     * Inicialmente, o requisito era aumentar o salário de todos os funcionários em 10%.
-     * Agora, se o último parâmetro for passado como `null`, todos os funcionários terão 
-     * seus salários aumentados pelo percentual especificado no segundo parâmetro.
-     * 
-     * Caso um nome específico seja informado, a função buscará esse funcionário na lista 
-     * e aplicará o aumento apenas a ele.
-     * 
-     * Assinatura do método:
-     * aumentarSalario(List<Funcionario> funcionarios, String valorAumento, String nomeFuncionarioOpcional)
-     * 
-     * Exemplo de chamada do método:
-     * aumentarSalario(funcionarios, "0.10", "João");
-     * */
+		/**
+	     * A função foi aprimorada para oferecer mais flexibilidade no aumento salarial.
+	     * Inicialmente, o requisito era aumentar o salário de todos os funcionários em 10%.
+	     * Agora, se o último parâmetro for passado como `null`, todos os funcionários terão 
+	     * seus salários aumentados pelo percentual especificado no segundo parâmetro.
+	     * 
+	     * Caso um nome específico seja informado, a função buscará esse funcionário na lista 
+	     * e aplicará o aumento apenas a ele.
+	     * 
+	     * Assinatura do método:
+	     * aumentarSalario(List<Funcionario> funcionarios, String valorAumento, String nomeFuncionarioOpcional)
+	     * 
+	     * Exemplo de chamada do método:
+	     * aumentarSalario(funcionarios, "0.10", "João");
+	     * */
 		
 		 aumentarSalario(funcionarios, "0.10", null);
-		 
 		 groupByFuncao(funcionarios);
 		 listaFuncionariosPorDataAniversario(funcionarios);
 		 exibirMaiorIdade(funcionarios);
