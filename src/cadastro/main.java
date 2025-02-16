@@ -119,6 +119,28 @@ public class main {
         }
 	}
 	
+	public static void exibirMaiorIdade(List<Funcionario> funcionarios) {
+        Iterator<Funcionario> iterator = funcionarios.iterator();
+   
+        Funcionario maisVelho=iterator.next();
+        while (iterator.hasNext()) {
+            Funcionario funcionario = iterator.next();
+            if (funcionario.getDataNascimento().getYear()< maisVelho.getDataNascimento().getYear()) {
+            	maisVelho=funcionario;
+            }
+            
+            
+        }
+        
+        System.out.println("=================== Funcionario com maior Idade ======================");
+        int idade = LocalDate.now().getYear()-maisVelho.getDataNascimento().getYear();
+        System.out.println("  Nome: " + maisVelho.getNome());
+        System.out.println("  Idade: " + idade);
+        System.out.println("  -----------------------------");
+		
+		
+	}
+
 	public static void groupByFuncao(List<Funcionario> funcionarios) {
 		Map<String, List<Funcionario>> funcionariosPorFuncao = new HashMap<>();
         for (Funcionario funcionario : funcionarios) {
@@ -200,6 +222,7 @@ public class main {
 		 groupByFuncao(funcionarios);
 		 
 		 listaFuncionariosPorDataAniversario(funcionarios);
+		 exibirMaiorIdade(funcionarios);
 		
 		 
 	}
