@@ -21,32 +21,32 @@ Estende a classe Pessoa e adiciona os atributos:
 
 ## Operações Implementadas:
 
-    Inserir funcionários: Adiciona funcionários à lista.
+Inserir funcionários: Adiciona funcionários à lista.
 
-    Remover funcionário: Remove um funcionário específico da lista (exemplo: "João").
+Remover funcionário: Remove um funcionário específico da lista (exemplo: "João").
 
-    Aumento de salário: Aplica um aumento de 10% no salário de todos os funcionários.
+Aumento de salário: Aplica um aumento de 10% no salário de todos os funcionários.
 
-    Agrupar por função: Agrupa os funcionários em um Map, onde a chave é a função e o valor é a lista de funcionários.
+Agrupar por função: Agrupa os funcionários em um Map, onde a chave é a função e o valor é a lista de funcionários.
 
-    Filtrar aniversariantes: Filtra e exibe os funcionários que fazem aniversário nos meses 10 (outubro) e 12 (dezembro).
-    
-    Exibe o funcionario mais de maior idade na lista.
+Filtrar aniversariantes: Filtra e exibe os funcionários que fazem aniversário nos meses 10 (outubro) e 12 (dezembro).
 
-    Ordenar alfabeticamente: Ordena e exibe os funcionários em ordem alfabética pelo nome.
+Exibe o funcionario mais de maior idade na lista.
 
-    Total dos salários: Calcula e exibe a soma de todos os salários dos funcionários.
+Ordenar alfabeticamente: Ordena e exibe os funcionários em ordem alfabética pelo nome.
 
-    Salários mínimos: Calcula e exibe quantos salários mínimos (R$ 1212,00) cada funcionário ganha.
+Total dos salários: Calcula e exibe a soma de todos os salários dos funcionários.
+
+Salários mínimos: Calcula e exibe quantos salários mínimos (R$ 1212,00) cada funcionário ganha.
 
 
 ### Detalhamento do código:
 
-    Inserir Funcionários:
+Inserir Funcionários:
 
-    Os funcionários são adicionados manualmente à lista funcionarios usando o construtor da classe Funcionario.
+Os funcionários são adicionados manualmente à lista funcionarios usando o construtor da classe Funcionario.
 
-    ```java
+```java
 		 List<Funcionario> funcionarios = new ArrayList<>();
 		 funcionarios.add(new Funcionario("Maria", LocalDate.of(2000, 10, 18), new BigDecimal("2509.44"),"Operador"));
 		 funcionarios.add(new Funcionario("João", LocalDate.of(1990, 05, 12), new BigDecimal("2284.38"),"Operador"));
@@ -58,11 +58,11 @@ Estende a classe Pessoa e adiciona os atributos:
 		 funcionarios.add(new Funcionario("Laura", LocalDate.of(1994, 07, 8), new BigDecimal("3017.45"),"Gerente"));
 		 funcionarios.add(new Funcionario("Heloísa", LocalDate.of(2003, 05, 24), new BigDecimal("1606.85"),"Eletricista"));
 		 funcionarios.add(new Funcionario("Helena", LocalDate.of(1996, 9, 02), new BigDecimal("2799.93"),"Gerente"));
-    ```
+```
     
-    Remover Funcionário:
+Remover Funcionário:
 
-    Um funcionário é removido da lista usando um Iterator.
+Um funcionário é removido da lista usando um Iterator.
     
 ```java
 
@@ -82,9 +82,9 @@ Estende a classe Pessoa e adiciona os atributos:
         }
 ```
 
-    Aumento de Salário:
+Aumento de Salário:
 
-    Um aumento de 10% é aplicado ao salário de cada funcionário, ou caso seja passado um funcionario especifico na chamada da funcao é aplicado um aumento de 10% apenas naquele funcionario
+Um aumento de 10% é aplicado ao salário de cada funcionário, ou caso seja passado um funcionario especifico na chamada da funcao é aplicado um aumento de 10% apenas naquele funcionario
 
 ```java
         public static void aumentarSalario(List<Funcionario>funcionarios, String valor, String f) {
@@ -114,11 +114,11 @@ Estende a classe Pessoa e adiciona os atributos:
 
 ```
 
-    Nesse ponto também foi criado uma funcao auxiliar para buscar os dados do funcionario pelo nome, e exibir os dados, buscando modularizar um pouco o código e deixar mais organizado.
+Nesse ponto também foi criado uma funcao auxiliar para buscar os dados do funcionario pelo nome, e exibir os dados, buscando modularizar um pouco o código e deixar mais organizado.
 
-    essas são as funções auxiliares:
+essas são as funções auxiliares:
 
-    Exibir dados
+Exibir dados
 
 ```java
         public static void exibirDados(List<Funcionario>funcionarios) {
@@ -147,7 +147,7 @@ Estende a classe Pessoa e adiciona os atributos:
 
 ```
 
-    E buscar dado por nome
+E buscar dado por nome
 
 ```java
 
@@ -164,9 +164,9 @@ Estende a classe Pessoa e adiciona os atributos:
                 return null;
 ```
     
-    Agrupar por Função:
+Agrupar por Função:
 
-    Os funcionários são agrupados em um Map, onde a chave é a função e o valor é a lista de funcionários. Essa funcionalidade foi dividida em duas funcoes, uma para agrupar e outra para listar.
+Os funcionários são agrupados em um Map, onde a chave é a função e o valor é a lista de funcionários. Essa funcionalidade foi dividida em duas funcoes, uma para agrupar e outra para listar.
 
 
 ```java
@@ -187,7 +187,7 @@ Estende a classe Pessoa e adiciona os atributos:
 		
 	}
 ```
-    Listar o agrupamento
+Listar o agrupamento
 
 ```java
     public static void exibirGroupByFuncao(Map<String, List<Funcionario>> funcionarios) {
@@ -215,9 +215,9 @@ Estende a classe Pessoa e adiciona os atributos:
 ```
 
 
-    Filtrar Aniversariantes:
+Filtrar Aniversariantes:
 
-    Funcionários que fazem aniversário nos meses 10 e 12 são filtrados e exibidos.
+Funcionários que fazem aniversário nos meses 10 e 12 são filtrados e exibidos.
 
 ```java
     	public static void listaFuncionariosPorDataAniversario(List<Funcionario>funcionarios) {
@@ -245,9 +245,9 @@ Estende a classe Pessoa e adiciona os atributos:
 	}
 
 ```
-    Ordenar Alfabeticamente:
+Ordenar Alfabeticamente:
 
-    A lista de funcionários é ordenada pelo nome usando Collections.sort.
+A lista de funcionários é ordenada pelo nome usando Collections.sort.
 ```java
     public static void ordenarPorAfalbeto(List<Funcionario> funcionarios) {
 		Collections.sort(funcionarios, new Comparator<Funcionario>() {
@@ -263,9 +263,9 @@ Estende a classe Pessoa e adiciona os atributos:
 	}
 
 ```
-    Exbir funcionario de maior idade
+Exbir funcionario de maior idade
 
-    É preciso fazer apenas um calculo entre o ano de nascimento dos funcionarios e verificar qual o menor.
+É preciso fazer apenas um calculo entre o ano de nascimento dos funcionarios e verificar qual o menor.
 
 ```java
     public static void exibirMaiorIdade(List<Funcionario> funcionarios) {
@@ -313,9 +313,9 @@ O total dos salários é calculado somando os salários de todos os funcionário
 	}
 ```
 
-    Salários Mínimos:
+Salários Mínimos:
 
-    Para cada funcionário, calcula quantos salários mínimos (R$ 1212,00) ele ganha.
+Para cada funcionário, calcula quantos salários mínimos (R$ 1212,00) ele ganha.
 
 ```java
     public static void totalSalarioMinimo(List<Funcionario> funcionarios) {
