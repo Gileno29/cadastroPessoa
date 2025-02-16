@@ -6,7 +6,7 @@ Este projeto é uma aplicação Java que gerencia uma lista de funcionários, pe
 
 - [Sobre](#sobre)
 - [Tecnologias](#tecnologias)
-- [Estrutura das Classes](#requisitos)
+- [Estrutura das Classes](#estrutura)
 - [Rodando a Aplicação](#uso)
 - [Estrutura Banco dados](#tabela)
 - [Estrutura do Projeto](#estrutura)
