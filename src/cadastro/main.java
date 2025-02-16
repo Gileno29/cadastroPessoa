@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 import java.util.Comparator;
+import java.math.RoundingMode;
 
 
 
@@ -96,6 +97,29 @@ public class main {
 	                System.out.println("-----------------------------");
 	            }
 	        }
+	}
+	
+	public static void totalSalarioMinimo(List<Funcionario> funcionarios) {
+     DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.getDefault());
+     symbols.setDecimalSeparator(',');
+     symbols.setGroupingSeparator('.');
+     BigDecimal salarioMinimo = new BigDecimal("1212.00");
+     DecimalFormat decimalFormat = new DecimalFormat("#,##0.00", symbols);
+
+	System.out.println("\nQuantos salários mínimos cada funcionário ganha:");
+	for (Funcionario funcionario : funcionarios) {
+	    // Calculando a quantidade de salários mínimos
+	    BigDecimal salariosMinimos = funcionario.getSalario().divide(salarioMinimo, 2, RoundingMode.HALF_UP);
+	    
+	    // Formatando o valor
+	    String salariosMinimosFormatado = decimalFormat.format(salariosMinimos);
+
+	    // Exibindo o resultado
+	    System.out.println("Nome: " + funcionario.getNome());
+	    System.out.println("Salário: " + decimalFormat.format(funcionario.getSalario()));
+	    System.out.println("Salários mínimos: " + salariosMinimosFormatado);
+	    System.out.println("-----------------------------");
+	}
 	}
 	
 	public static void exibirGroupByFuncao(Map<String, List<Funcionario>> funcionarios) {
@@ -230,8 +254,8 @@ public class main {
 		 funcionarios.add(new Funcionario("Helena", LocalDate.of(1996, 9, 02), new BigDecimal("2799.93"),"Gerente"));
 		 
 		 
-		// exibirDados(funcionarios);
-		// removerFuncionario(funcionarios, "joão");
+		 exibirDados(funcionarios);
+		 removerFuncionario(funcionarios, "joão");
 		 
 	/**
      * A função foi aprimorada para oferecer mais flexibilidade no aumento salarial.
@@ -249,14 +273,14 @@ public class main {
      * aumentarSalario(funcionarios, "0.10", "João");
      * */
 		
-		// aumentarSalario(funcionarios, "0.10", null);
+		 aumentarSalario(funcionarios, "0.10", null);
 		 
 		 groupByFuncao(funcionarios);
-		 
 		 listaFuncionariosPorDataAniversario(funcionarios);
 		 exibirMaiorIdade(funcionarios);
 		 ordenarPorAfalbeto(funcionarios);
 		 totalSalarios(funcionarios);
+		 totalSalarioMinimo(funcionarios);
 		
 		 
 	}
