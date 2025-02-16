@@ -198,6 +198,22 @@ public class main {
 		exibirDados(funcionarios);
 		
 	}
+	
+	public static void totalSalarios(List<Funcionario> funcionarios) {
+		BigDecimal totalSalarios = BigDecimal.ZERO;
+		DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.getDefault());
+        symbols.setDecimalSeparator(',');
+        symbols.setGroupingSeparator('.');
+        DecimalFormat decimalFormat = new DecimalFormat("#,##0.00", symbols);
+		for (Funcionario funcionario : funcionarios) {
+		    totalSalarios = totalSalarios.add(funcionario.getSalario());
+		}
+
+		String totalFormatado = decimalFormat.format(totalSalarios);
+
+		System.out.println("\nTotal dos salários dos funcionários: " + totalFormatado);
+		
+	}
 	public static void main(String[] args) {
 		
 		// TODO Auto-generated method stub
@@ -240,6 +256,7 @@ public class main {
 		 listaFuncionariosPorDataAniversario(funcionarios);
 		 exibirMaiorIdade(funcionarios);
 		 ordenarPorAfalbeto(funcionarios);
+		 totalSalarios(funcionarios);
 		
 		 
 	}
