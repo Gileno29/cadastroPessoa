@@ -1,14 +1,21 @@
 package cadastro;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 public class Funcionario extends Pessoa{
-	private Float salario;
-	private String funcao;
-	
-	
-	public Float getSalario() {
-		return salario;
+	 private BigDecimal salario;
+	 private String funcao;
+
+	 public Funcionario(String nome, LocalDate dataNascimento, BigDecimal salario, String funcao) {
+	        super(nome, dataNascimento);
+	        this.salario = salario;
+	        this.funcao = funcao;
+	    }
+
+	public BigDecimal getSalario() {
+		return this.salario;
 	}
-	public void setSalario(Float salario) {
+	public void setSalario(BigDecimal salario) {
 		this.salario = salario;
 	}
 	public String getFuncao() {
@@ -18,7 +25,15 @@ public class Funcionario extends Pessoa{
 		this.funcao = funcao;
 	}
 	
-	
-	
+  @Override
+    public String toString() {
+        return "Funcionario{" +
+                "nome='" + getNome() + '\'' +
+                ", dataNascimento=" + getDataNascimento() +
+                ", salario=" + salario +
+                ", funcao='" + funcao + '\'' +
+                '}';
+    }
+
 
 }
