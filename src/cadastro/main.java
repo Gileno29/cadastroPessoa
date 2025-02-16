@@ -72,6 +72,30 @@ public class main {
 		
 	}
 	
+	public static void listaFuncionariosPorDataAniversario(List<Funcionario>funcionarios) {
+		DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        // Formatador de números (ponto para milhar e vírgula para decimal)
+        DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.getDefault());
+        symbols.setDecimalSeparator(',');
+        symbols.setGroupingSeparator('.');
+        
+        DecimalFormat decimalFormat = new DecimalFormat("#,##0.00", symbols);
+		 System.out.println("\nFuncionários que fazem aniversário nos meses 10 e 12:");
+	        for (Funcionario funcionario : funcionarios) {
+	            int mesNascimento = funcionario.getDataNascimento().getMonthValue();
+	            if (mesNascimento == 10 || mesNascimento == 12) {
+	                String dataFormatada = funcionario.getDataNascimento().format(dateFormatter);
+	                String salarioFormatado = decimalFormat.format(funcionario.getSalario());
+
+	                System.out.println("Nome: " + funcionario.getNome());
+	                System.out.println("Data de Nascimento: " + dataFormatada);
+	                System.out.println("Salário: " + salarioFormatado);
+	                System.out.println("Função: " + funcionario.getFuncao());
+	                System.out.println("-----------------------------");
+	            }
+	        }
+	}
+	
 	public static void exibirGroupByFuncao(Map<String, List<Funcionario>> funcionarios) {
 		DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.getDefault());
@@ -174,6 +198,8 @@ public class main {
 		// aumentarSalario(funcionarios, "0.10", null);
 		 
 		 groupByFuncao(funcionarios);
+		 
+		 listaFuncionariosPorDataAniversario(funcionarios);
 		
 		 
 	}
