@@ -381,48 +381,7 @@ Data de Nascimento: 12/05/1990
 Salário: 2.284,38
 Função: Operador
 -----------------------------
-Nome: Caio
-Data de Nascimento: 02/05/1961
-Salário: 9.836,14
-Função: Coordenador
------------------------------
-Nome: Miguel
-Data de Nascimento: 14/10/1988
-Salário: 19.119,88
-Função: Diretor
------------------------------
-Nome: Alice
-Data de Nascimento: 05/01/1995
-Salário: 2.234,68
-Função: Recepcionista
------------------------------
-Nome: Heitor
-Data de Nascimento: 19/11/1999
-Salário: 1.582,72
-Função: Operador
------------------------------
-Nome: Athur
-Data de Nascimento: 31/03/1993
-Salário: 4.071,84
-Função: Contador
------------------------------
-Nome: Laura
-Data de Nascimento: 08/07/1994
-Salário: 3.017,45
-Função: Gerente
------------------------------
-Nome: Heloísa
-Data de Nascimento: 24/05/2003
-Salário: 1.606,85
-Função: Eletricista
------------------------------
-Nome: Helena
-Data de Nascimento: 02/09/1996
-Salário: 2.799,93
-Função: Gerente
------------------------------
 
-Funcionário joão removido com sucesso! 
 
 ======================  Lista de funcionarios após remoção =========================
 Nome: Maria
@@ -435,41 +394,7 @@ Data de Nascimento: 02/05/1961
 Salário: 9.836,14
 Função: Coordenador
 -----------------------------
-Nome: Miguel
-Data de Nascimento: 14/10/1988
-Salário: 19.119,88
-Função: Diretor
------------------------------
-Nome: Alice
-Data de Nascimento: 05/01/1995
-Salário: 2.234,68
-Função: Recepcionista
------------------------------
-Nome: Heitor
-Data de Nascimento: 19/11/1999
-Salário: 1.582,72
-Função: Operador
------------------------------
-Nome: Athur
-Data de Nascimento: 31/03/1993
-Salário: 4.071,84
-Função: Contador
------------------------------
-Nome: Laura
-Data de Nascimento: 08/07/1994
-Salário: 3.017,45
-Função: Gerente
------------------------------
-Nome: Heloísa
-Data de Nascimento: 24/05/2003
-Salário: 1.606,85
-Função: Eletricista
------------------------------
-Nome: Helena
-Data de Nascimento: 02/09/1996
-Salário: 2.799,93
-Função: Gerente
------------------------------
+
 ======================  Lista de funcionarios após promoção =========================
 Nome: Maria
 Data de Nascimento: 18/10/2000
@@ -480,42 +405,7 @@ Nome: Caio
 Data de Nascimento: 02/05/1961
 Salário: 10.819,75
 Função: Coordenador
------------------------------
-Nome: Miguel
-Data de Nascimento: 14/10/1988
-Salário: 21.031,87
-Função: Diretor
------------------------------
-Nome: Alice
-Data de Nascimento: 05/01/1995
-Salário: 2.458,15
-Função: Recepcionista
------------------------------
-Nome: Heitor
-Data de Nascimento: 19/11/1999
-Salário: 1.740,99
-Função: Operador
------------------------------
-Nome: Athur
-Data de Nascimento: 31/03/1993
-Salário: 4.479,02
-Função: Contador
------------------------------
-Nome: Laura
-Data de Nascimento: 08/07/1994
-Salário: 3.319,20
-Função: Gerente
------------------------------
-Nome: Heloísa
-Data de Nascimento: 24/05/2003
-Salário: 1.767,54
-Função: Eletricista
------------------------------
-Nome: Helena
-Data de Nascimento: 02/09/1996
-Salário: 3.079,92
-Função: Gerente
------------------------------
+
 
 Função: Operador
   Nome: Maria
@@ -527,45 +417,6 @@ Função: Operador
   Salário: 1.740,99
   -----------------------------
 
-Função: Recepcionista
-  Nome: Alice
-  Data de Nascimento: 05/01/1995
-  Salário: 2.458,15
-  -----------------------------
-
-Função: Eletricista
-  Nome: Heloísa
-  Data de Nascimento: 24/05/2003
-  Salário: 1.767,54
-  -----------------------------
-
-Função: Diretor
-  Nome: Miguel
-  Data de Nascimento: 14/10/1988
-  Salário: 21.031,87
-  -----------------------------
-
-Função: Gerente
-  Nome: Laura
-  Data de Nascimento: 08/07/1994
-  Salário: 3.319,20
-  -----------------------------
-  Nome: Helena
-  Data de Nascimento: 02/09/1996
-  Salário: 3.079,92
-  -----------------------------
-
-Função: Coordenador
-  Nome: Caio
-  Data de Nascimento: 02/05/1961
-  Salário: 10.819,75
-  -----------------------------
-
-Função: Contador
-  Nome: Athur
-  Data de Nascimento: 31/03/1993
-  Salário: 4.479,02
-  -----------------------------
 
 Funcionários que fazem aniversário nos meses 10 e 12:
 Nome: Maria
@@ -593,41 +444,7 @@ Data de Nascimento: 31/03/1993
 Salário: 4.479,02
 Função: Contador
 -----------------------------
-Nome: Caio
-Data de Nascimento: 02/05/1961
-Salário: 10.819,75
-Função: Coordenador
------------------------------
-Nome: Heitor
-Data de Nascimento: 19/11/1999
-Salário: 1.740,99
-Função: Operador
------------------------------
-Nome: Helena
-Data de Nascimento: 02/09/1996
-Salário: 3.079,92
-Função: Gerente
------------------------------
-Nome: Heloísa
-Data de Nascimento: 24/05/2003
-Salário: 1.767,54
-Função: Eletricista
------------------------------
-Nome: Laura
-Data de Nascimento: 08/07/1994
-Salário: 3.319,20
-Função: Gerente
------------------------------
-Nome: Maria
-Data de Nascimento: 18/10/2000
-Salário: 2.760,38
-Função: Operador
------------------------------
-Nome: Miguel
-Data de Nascimento: 14/10/1988
-Salário: 21.031,87
-Função: Diretor
------------------------------
+
 
 Total dos salários dos funcionários: 51.456,82
 
