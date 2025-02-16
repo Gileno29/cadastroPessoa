@@ -493,7 +493,7 @@ Execute o código usando o comando:
 exemplo de saída:
 
 ```sh
-    Nome: Maria
+Nome: Maria
 Data de Nascimento: 18/10/2000
 Salário: 2.509,44
 Função: Operador
