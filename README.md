@@ -7,8 +7,8 @@ Este projeto é uma aplicação Java que gerencia uma lista de funcionários, pe
 - [Sobre](#sobre)
 - [Tecnologias](#tecnologias)
 - [Estrutura das Classes](#estrutura)
-- [Rodando a Aplicação](#uso)
-- [Estrutura Banco dados](#tabela)
+- [Detalhamento das Operações](#operacoes)
+- [Execução](#execucao)
 - [Estrutura do Projeto](#estrutura)
 - [Infraestrutura](#infraestrutura)
 
@@ -130,6 +130,7 @@ public class Funcionario extends Pessoa{
 
 <div id='estrutura'/>
 
+
 ## Operações Implementadas:
 
 - Inserir funcionários: Adiciona funcionários à lista.
@@ -150,7 +151,7 @@ public class Funcionario extends Pessoa{
 
 - Salários mínimos: Calcula e exibe quantos salários mínimos (R$ 1212,00) cada funcionário ganha.
 
-
+<div id='operacoes'/>
 ### Detalhamento do código:
 
 Inserir Funcionários:
@@ -477,7 +478,7 @@ Execute o código usando o comando:
     bash java Principal
 ```
 
-
+<div id='execucao'/>
 exemplo de saída:
 
 ```sh
