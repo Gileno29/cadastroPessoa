@@ -10,7 +10,7 @@ Este projeto é uma aplicação Java que gerencia uma lista de funcionários, pe
 - [Detalhamento das Operações](#operacoes)
 - [Execução](#execucao)
 - [Estrutura do Projeto](#estrutura)
-- [Infraestrutura](#infraestrutura)
+
 
 
 
