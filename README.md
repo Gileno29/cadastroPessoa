@@ -2,7 +2,31 @@
 
 Este projeto é uma aplicação Java que gerencia uma lista de funcionários, permitindo a execução de diversas operações, como adicionar, remover, atualizar e consultar informações dos funcionários. Abaixo estão detalhadas as funcionalidades e como o código foi implementado.
 
+## Tabela de Conteúdos
 
+- [Sobre](#sobre)
+- [Tecnologias](#tecnologias)
+- [Requisitos](#requisitos)
+- [Rodando a Aplicação](#uso)
+- [Estrutura Banco dados](#tabela)
+- [Estrutura do Projeto](#estrutura)
+- [Infraestrutura](#infraestrutura)
+
+
+
+<div id='sobre'/>
+
+
+## Tecnologias
+<div style="display: flex">
+ <img align="center" alt="Java" height="50" width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"/>
+ <img align="center" alt="Eclipse" height="50" width="100"  width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg"/>
+ <img  align="center" alt="GIT" height="50" width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg" /> 
+
+          
+</div>
+
+<div id='tecnologias'/>
 
 #### Classe Pessoa
 Representa uma pessoa com os atributos:
