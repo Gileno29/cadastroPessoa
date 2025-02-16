@@ -353,9 +353,8 @@ Um ambiente de desenvolvimento Java (IDE como IntelliJ, Eclipse ou VS Code) ou t
 
 Passos:
 
-    Copie o código para um arquivo chamado main.java.
-
-    Compile o código usando o comando:
+ - Copie o código para um arquivo chamado main.java.
+ - Compile o código usando o comando:
 
 ```sh 
     bash javac main.java
