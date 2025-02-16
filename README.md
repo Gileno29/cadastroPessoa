@@ -152,6 +152,7 @@ public class Funcionario extends Pessoa{
 - Salários mínimos: Calcula e exibe quantos salários mínimos (R$ 1212,00) cada funcionário ganha.
 
 <div id='operacoes'/>
+	
 ### Detalhamento do código:
 
 Inserir Funcionários:
@@ -171,7 +172,8 @@ Os funcionários são adicionados manualmente à lista funcionarios usando o con
  funcionarios.add(new Funcionario("Heloísa", LocalDate.of(2003, 05, 24), new BigDecimal("1606.85"),"Eletricista"));
  funcionarios.add(new Funcionario("Helena", LocalDate.of(1996, 9, 02), new BigDecimal("2799.93"),"Gerente"));
 ```
-    
+
+
 Remover Funcionário:
 
 Um funcionário é removido da lista usando um Iterator.
@@ -193,6 +195,7 @@ public static void removerFuncionario(List<Funcionario>funcionarios, String elem
 	}
 }
 ```
+
 
 Aumento de Salário:
 
@@ -276,6 +279,7 @@ public static Funcionario getByName(List<Funcionario>funcionarios, String name )
 	return null;
 ```
     
+
 Agrupar por Função:
 
 Os funcionários são agrupados em um Map, onde a chave é a função e o valor é a lista de funcionários. Essa funcionalidade foi dividida em duas funcoes, uma para agrupar e outra para listar.
@@ -299,6 +303,7 @@ exibirGroupByFuncao(funcionariosPorFuncao);
 	
 }
 ```
+
 Listar o agrupamento
 
 ```java
@@ -325,6 +330,7 @@ for (Map.Entry<String, List<Funcionario>> entry : funcionarios.entrySet()) {
 }
 }
 ```
+
 
 
 Filtrar Aniversariantes:
@@ -357,6 +363,7 @@ for (Funcionario funcionario : funcionarios) {
 }
 
 ```
+
 Ordenar Alfabeticamente:
 
 A lista de funcionários é ordenada pelo nome usando Collections.sort.
@@ -375,6 +382,7 @@ public static void ordenarPorAfalbeto(List<Funcionario> funcionarios) {
 }
 
 ```
+
 Exbir funcionario de maior idade
 
 É preciso fazer apenas um calculo entre o ano de nascimento dos funcionarios e verificar qual o menor.
@@ -403,6 +411,7 @@ System.out.println("  -----------------------------");
 }
 
 ```
+
 Total dos Salários:
 
 O total dos salários é calculado somando os salários de todos os funcionários.
@@ -424,6 +433,7 @@ DecimalFormat decimalFormat = new DecimalFormat("#,##0.00", symbols);
 	
 }
 ```
+
 
 Salários Mínimos:
 
@@ -453,6 +463,7 @@ for (Funcionario funcionario : funcionarios) {
 }
 }
 ```
+
 
 
 ### Como Executar o Projeto
