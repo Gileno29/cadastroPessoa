@@ -29,6 +29,7 @@ Este projeto é uma aplicação Java que gerencia uma lista de funcionários, pe
 <div id='tecnologias'/>
 
 
+
 ## Estrutura das classes
 
 #### Classe Pessoa
@@ -38,12 +39,94 @@ Representa uma pessoa com os atributos:
 
     dataNascimento (LocalDate): Data de nascimento no formato yyyy-MM-dd.
 
+```java
+package cadastro;
+import java.time.LocalDate;
+import java.util.Date;
+
+public class Pessoa {
+	private String nome;
+	private LocalDate dataNascimento;
+	
+	 public Pessoa(String nome, LocalDate dataNascimento) {
+	        this.nome = nome;
+	        this.dataNascimento = dataNascimento;
+	   }
+	
+	public String getNome() {
+		return this.nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public LocalDate getDataNascimento() {
+		return this.dataNascimento;
+	}
+	public void setDataNascimento(LocalDate dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+	
+		
+	
+}
+
+
+```
+
 #### Classe Funcionario
 Estende a classe Pessoa e adiciona os atributos:
 
     salario (BigDecimal): Salário do funcionário.
 
     funcao (String): Função do funcionário.
+
+```java
+package cadastro;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.Iterator;
+import java.util.List;
+
+public class Funcionario extends Pessoa{
+	 private BigDecimal salario;
+	 private String funcao;
+	 
+	 
+
+	 public Funcionario(String nome, LocalDate dataNascimento, BigDecimal salario, String funcao) {
+	        super(nome, dataNascimento);
+	        this.salario = salario;
+	        this.funcao = funcao;
+	    }
+
+	public BigDecimal getSalario() {
+		return this.salario;
+	}
+	public void setSalario(BigDecimal salario) {
+		this.salario = salario;
+	}
+	public String getFuncao() {
+		return funcao;
+	}
+	public void setFuncao(String funcao) {
+		this.funcao = funcao;
+	}
+	
+	
+  @Override
+    public String toString() {
+        return "Funcionario{" +
+                "nome='" + getNome() + '\'' +
+                ", dataNascimento=" + getDataNascimento() +
+                ", salario=" + salario +
+                ", funcao='" + funcao + '\'' +
+                '}';
+    }
+
+
+}
+
+```
 
 <div id='estrutura'/>
 
