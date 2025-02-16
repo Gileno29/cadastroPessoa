@@ -6,9 +6,6 @@ public class Pessoa {
 	private String nome;
 	private LocalDate dataNascimento;
 	
-	 Pessoa(){
-		 
-	 }
 	 public Pessoa(String nome, LocalDate dataNascimento) {
 	        this.nome = nome;
 	        this.dataNascimento = dataNascimento;

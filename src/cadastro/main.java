@@ -10,6 +10,8 @@ import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Collections;
+import java.util.Comparator;
 
 
 
@@ -182,6 +184,20 @@ public class main {
 		System.out.println("======================  Lista de funcionarios após promoção =========================");
 		exibirDados(funcionarios);
 	}
+	
+	
+	public static void ordenarPorAfalbeto(List<Funcionario> funcionarios) {
+		Collections.sort(funcionarios, new Comparator<Funcionario>() {
+		    @Override
+		    public int compare(Funcionario f1, Funcionario f2) {
+		        return f1.getNome().compareTo(f2.getNome());
+		    }
+		});
+		
+		System.out.println("=================================== Exibindo dados de funcionarios  em ordem alfabetica ========================");
+		exibirDados(funcionarios);
+		
+	}
 	public static void main(String[] args) {
 		
 		// TODO Auto-generated method stub
@@ -223,6 +239,7 @@ public class main {
 		 
 		 listaFuncionariosPorDataAniversario(funcionarios);
 		 exibirMaiorIdade(funcionarios);
+		 ordenarPorAfalbeto(funcionarios);
 		
 		 
 	}
