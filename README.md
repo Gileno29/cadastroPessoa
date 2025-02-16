@@ -6,7 +6,7 @@ Este projeto é uma aplicação Java que gerencia uma lista de funcionários, pe
 
 - [Sobre](#sobre)
 - [Tecnologias](#tecnologias)
-- [Requisitos](#requisitos)
+- [Estrutura das Classes](#requisitos)
 - [Rodando a Aplicação](#uso)
 - [Estrutura Banco dados](#tabela)
 - [Estrutura do Projeto](#estrutura)
@@ -28,6 +28,9 @@ Este projeto é uma aplicação Java que gerencia uma lista de funcionários, pe
 
 <div id='tecnologias'/>
 
+
+## Estrutura das classes
+
 #### Classe Pessoa
 Representa uma pessoa com os atributos:
 
@@ -42,6 +45,7 @@ Estende a classe Pessoa e adiciona os atributos:
 
     funcao (String): Função do funcionário.
 
+<div id='estrutura'/>
 
 ## Operações Implementadas:
 
